@@ -16,8 +16,8 @@ import {NotImplementedError} from '../extensions/index.js';
  */
 
 export default function countCats(...matrix) {
-  return matrix
-      .flat(Infinity)
-      .filter(x => x === '^^')
-      .length;
+    return matrix
+        .flat(Infinity)
+        .filter(x => x === '^^')
+        .length;
 }
