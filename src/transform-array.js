@@ -18,11 +18,24 @@ export default function transform(arr) {
     let tempArr = [];
     for (let i = 0; i < arr.length; i++) {
         switch (arr[i]) {
-            case '--discard-next': i += 2; break;
-            case '--discard-prev': tempArr.pop(); break;
-            case '--double-next': if (i + 1 < arr.length) {tempArr.push(arr[i + 1])} break;
-            case '--double-prev': if (i - 1 > 0) {tempArr.push(arr[i - 1])} break;
-            default: tempArr.push(arr[i]);
+            case '--discard-next':
+                i += 2;
+                break;
+            case '--discard-prev':
+                tempArr.pop();
+                break;
+            case '--double-next':
+                if (i + 1 < arr.length) {
+                    tempArr.push(arr[i + 1])
+                }
+                break;
+            case '--double-prev':
+                if (i - 1 > 0) {
+                    tempArr.push(arr[i - 1])
+                }
+                break;
+            default:
+                tempArr.push(arr[i]);
         }
     }
     return tempArr;
